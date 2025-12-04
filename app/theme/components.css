@@ -1,0 +1,33 @@
+/* ============================
+   antd-mobile 组件样式统一
+   ============================ */
+@layer components {
+  /* 统一按钮圆角为 shadcn 标准 (rounded-md = 0.5rem = 8px) */
+  .adm-button {
+    --adm-button-border-radius: 0.5rem !important;
+    border-radius: 0.5rem !important;
+  }
+  
+  /* 小按钮圆角 */
+  .adm-button-small {
+    --adm-button-border-radius: 0.5rem !important;
+    border-radius: 0.5rem !important;
+  }
+  
+  /* 大按钮圆角 */
+  .adm-button-large {
+    --adm-button-border-radius: 0.5rem !important;
+    border-radius: 0.5rem !important;
+  }
+  
+  /* 统一其他 antd-mobile 组件圆角 */
+  .adm-card,
+  .adm-dialog,
+  .adm-modal,
+  .adm-popup,
+  .adm-picker,
+  .adm-input,
+  .adm-text-area {
+    border-radius: 0.5rem !important;
+  }
+}

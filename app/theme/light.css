@@ -1,0 +1,150 @@
+/* ============================
+   Light Mode Themes
+   ============================ */
+
+/* ============================
+   基础样式（所有主题共享）
+   ============================ */
+:root {
+  --radius: 0.625rem;
+  
+  /* 基础颜色 */
+  --background: oklch(1 0 0);
+  --foreground: oklch(0.145 0 0);
+  
+  /* 卡片和弹窗 */
+  --card: oklch(1 0 0);
+  --card-foreground: oklch(0.145 0 0);
+  --popover: oklch(1 0 0);
+  --popover-foreground: oklch(0.145 0 0);
+  
+  /* 主色调 - 默认灰色（会被主题覆盖） */
+  --primary: oklch(0.205 0 0);
+  --primary-foreground: oklch(0.985 0 0);
+  
+  /* 次要颜色 */
+  --secondary: oklch(0.97 0 0);
+  --secondary-foreground: oklch(0.205 0 0);
+  
+  /* 静音/禁用 */
+  --muted: oklch(0.97 0 0);
+  --muted-foreground: oklch(0.556 0 0);
+  
+  /* 强调色 */
+  --accent: oklch(0.97 0 0);
+  --accent-foreground: oklch(0.205 0 0);
+  
+  /* 危险/删除 */
+  --destructive: oklch(0.577 0.245 27.325);
+  
+  /* 边框和输入 */
+  --border: oklch(0.922 0 0);
+  --input: oklch(0.922 0 0);
+  --ring: oklch(0.708 0 0);
+  
+  /* 图表颜色 */
+  --chart-1: oklch(0.646 0.222 41.116);
+  --chart-2: oklch(0.6 0.118 184.704);
+  --chart-3: oklch(0.398 0.07 227.392);
+  --chart-4: oklch(0.828 0.189 84.429);
+  --chart-5: oklch(0.769 0.188 70.08);
+  
+  /* 侧边栏 */
+  --sidebar: oklch(0.985 0 0);
+  --sidebar-foreground: oklch(0.145 0 0);
+  --sidebar-primary: oklch(0.205 0 0);
+  --sidebar-primary-foreground: oklch(0.985 0 0);
+  --sidebar-accent: oklch(0.97 0 0);
+  --sidebar-accent-foreground: oklch(0.205 0 0);
+  --sidebar-border: oklch(0.922 0 0);
+  --sidebar-ring: oklch(0.708 0 0);
+  
+  /* antd-mobile 通用变量 */
+  --adm-color-success: oklch(0.647 0.166 163.23); /* #00b578 */
+  --adm-color-warning: oklch(0.709 0.169 62.11);  /* #ff8f1f */
+  --adm-color-danger: oklch(0.592 0.242 24.47);   /* #ff3141 */
+  --adm-color-white: oklch(1 0 0);
+  --adm-color-text: oklch(0.278 0 0);             /* #333333 */
+  --adm-color-text-secondary: oklch(0.478 0 0);   /* #666666 */
+  --adm-color-weak: oklch(0.658 0 0);             /* #999999 */
+  --adm-color-light: oklch(0.848 0 0);            /* #cccccc */
+  --adm-color-border: oklch(0.945 0 0);           /* #eeeeee */
+  --adm-color-box: oklch(0.97 0 0);               /* #f5f5f5 */
+  --adm-color-background: oklch(1 0 0);
+  --adm-font-size-main: var(--adm-font-size-5);
+  --adm-font-family: -apple-system, blinkmacsystemfont, 'Helvetica Neue',
+    helvetica, segoe ui, arial, roboto, 'PingFang SC', 'miui',
+    'Hiragino Sans GB', 'Microsoft Yahei', sans-serif;
+}
+
+/* ============================
+   中性灰主题 (Light)
+   ============================ */
+:root[data-theme="neutral"]:not(.dark) {
+  /* 主色调 - Neutral 灰色 */
+  --primary: oklch(0.205 0 0);
+  --primary-foreground: oklch(0.985 0 0);
+  
+  /* 强调色 */
+  --accent: oklch(0.97 0 0);
+  --accent-foreground: oklch(0.205 0 0);
+  
+  /* 环形指示器 */
+  --ring: oklch(0.708 0 0);
+  
+  /* 侧边栏跟随主题 */
+  --sidebar-primary: oklch(0.205 0 0);
+  --sidebar-accent: oklch(0.97 0 0);
+  --sidebar-ring: oklch(0.708 0 0);
+  
+  /* antd-mobile 主题色 */
+  --adm-color-primary: oklch(0.205 0 0);
+}
+
+/* ============================
+   蓝色主题 (Light)
+   ============================ */
+:root[data-theme="blue"]:not(.dark) {
+  /* 主色调 - 蓝色 */
+  --primary: oklch(0.55 0.2 257);
+  --primary-foreground: oklch(0.985 0 0);
+  
+  /* 强调色 - 浅蓝 */
+  --accent: oklch(0.95 0.03 257);
+  --accent-foreground: oklch(0.55 0.2 257);
+  
+  /* 环形指示器 */
+  --ring: oklch(0.55 0.2 257);
+  
+  /* 侧边栏跟随主题 */
+  --sidebar-primary: oklch(0.55 0.2 257);
+  --sidebar-accent: oklch(0.95 0.03 257);
+  --sidebar-ring: oklch(0.55 0.2 257);
+  
+  /* antd-mobile 主题色 */
+  --adm-color-primary: oklch(0.55 0.2 257);
+}
+
+/* ============================
+   紫色主题 (Light)
+   ============================ */
+:root[data-theme="purple"]:not(.dark) {
+  /* 主色调 - 紫色 */
+  --primary: oklch(0.51 0.22 281);
+  --primary-foreground: oklch(0.985 0 0);
+  
+  /* 强调色 - 浅紫 */
+  --accent: oklch(0.95 0.03 281);
+  --accent-foreground: oklch(0.51 0.22 281);
+  
+  /* 环形指示器 */
+  --ring: oklch(0.51 0.22 281);
+  
+  /* 侧边栏跟随主题 */
+  --sidebar-primary: oklch(0.51 0.22 281);
+  --sidebar-accent: oklch(0.95 0.03 281);
+  --sidebar-ring: oklch(0.51 0.22 281);
+  
+  /* antd-mobile 主题色 */
+  --adm-color-primary: oklch(0.51 0.22 281);
+}
