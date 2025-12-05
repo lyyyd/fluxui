@@ -119,7 +119,7 @@ function BlockViewerProvider({
         className="group/block-view-wrapper flex min-w-0 scroll-mt-24 flex-col-reverse items-stretch gap-4 overflow-hidden md:flex-col"
         style={
           {
-            "--height": item.meta?.iframeHeight ?? "930px",
+            "--height": item.meta?.iframeHeight ?? "500px",
           } as React.CSSProperties
         }
       >

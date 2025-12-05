@@ -451,9 +451,6 @@ export const examples: Registry["items"] = [
         type: "registry:example",
       },
     ],
-    meta: {
-      iframeHeight: "400px",
-    },
   },
   {
     name: "calendar-form",
