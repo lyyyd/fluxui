@@ -56,29 +56,33 @@ export function ThemeSwitcher() {
     { value: "blue", label: "蓝色", color: "oklch(0.55 0.2 257)" },
     { value: "purple", label: "紫色", color: "oklch(0.51 0.22 281)" },
   ]
-
   return (
     <div className="flex flex-wrap items-center gap-4 p-4 rounded-lg border bg-card">
       <div className="flex items-center gap-2">
-        <span className="text-sm font-medium">主题色:</span>        <div className="flex gap-2">
+        <span className="text-sm font-medium">主题色:</span>
+        <div className="flex gap-2">
           {themes.map((t) => (
-            <Button
+            <button
               key={t.value}
-              variant={theme === t.value ? "default" : "outline"}
-              size="sm"
               onClick={() => setTheme(t.value)}
+              className="relative flex items-center gap-1.5 rounded-md px-3 py-1.5 text-sm transition-colors hover:bg-accent"
             >
               <span 
-                className="inline-block w-3 h-3 rounded-full mr-1.5" 
+                className="inline-block w-3 h-3 rounded-full" 
                 style={{ backgroundColor: t.color }}
               />
-              {t.label}
-            </Button>
+              <span>{t.label}</span>
+              {theme === t.value && (
+                <span className="absolute -bottom-0.5 left-1/2 h-0.5 w-8 -translate-x-1/2 rounded-full bg-primary" />
+              )}
+            </button>
           ))}
         </div>
       </div>
 
-      <div className="h-6 w-px bg-border" />      <div className="flex items-center gap-2">
+      <div className="h-6 w-px bg-border" />
+      
+      <div className="flex items-center gap-2">
         <span className="text-sm font-medium">模式:</span>
         <Button
           variant="outline"

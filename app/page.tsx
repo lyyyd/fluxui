@@ -48,7 +48,13 @@ export default function Home() {
             <div className="flex flex-col gap-3 pt-4 sm:flex-row sm:justify-center">
               <Link href="/playground/button">
                 <Button size="lg" className="gap-2">
-                  View Demo
+                  Button Demo
+                  <ArrowRight className="h-4 w-4" />
+                </Button>
+              </Link>
+              <Link href="/playground/select">
+                <Button size="lg" variant="secondary" className="gap-2">
+                  Select Demo
                   <ArrowRight className="h-4 w-4" />
                 </Button>
               </Link>
