@@ -1,11 +1,21 @@
+import * as React from "react"
 import Image from "next/image"
+import { registryItemFileSchema } from "shadcn/schema"
+import { z } from "zod"
 
+import { highlightCode } from "@/lib/highlight-code"
+import {
+  createFileTreeForRegistryItemFiles,
+  getRegistryItem,
+} from "@/lib/registry"
+import { cn } from "@/lib/utils"
+import { BlockViewer } from "@/components/block-viewer"
 import { ComponentPreviewTabs } from "@/components/component-preview-tabs"
 import { ComponentSource } from "@/components/component-source"
 import { Index } from "@/registry/__index__"
 import { type Style } from "@/registry/styles"
 
-export function ComponentPreview({
+export async function ComponentPreview({
   name,
   styleName = "new-york-v4",
   type,
@@ -13,6 +23,7 @@ export function ComponentPreview({
   align = "center",
   hideCode = false,
   chromeLessOnMobile = false,
+  withBlockViewer = true,
   ...props
 }: React.ComponentProps<"div"> & {
   name: string
@@ -22,6 +33,7 @@ export function ComponentPreview({
   hideCode?: boolean
   type?: "block" | "component" | "example"
   chromeLessOnMobile?: boolean
+  withBlockViewer?: boolean
 }) {
   const Component = Index[styleName]?.[name]?.component
 
@@ -61,6 +73,64 @@ export function ComponentPreview({
     )
   }
 
+  if (withBlockViewer) {
+    const item = await getCachedRegistryItem(name, styleName)
+
+    if (!item?.files) {
+      return (
+        <ComponentPreviewTabs
+          className={className}
+          align={align}
+          hideCode={hideCode}
+          component={<Component />}
+          source={
+            <ComponentSource
+              name={name}
+              collapsible={false}
+              styleName={styleName}
+            />
+          }
+          chromeLessOnMobile={chromeLessOnMobile}
+          {...props}
+        />
+      )
+    }
+
+    const [tree, highlightedFiles] = await Promise.all([
+      getCachedFileTree(item.files),
+      getCachedHighlightedFiles(item.files),
+    ])
+
+    return (
+      <BlockViewer
+        item={item}
+        tree={tree}
+        highlightedFiles={highlightedFiles}
+        styleName={styleName}
+      >
+        <ComponentPreviewTabs
+          className={cn(
+            "my-0 **:[.preview]:h-auto **:[.preview]:p-4 **:[.preview>.p-6]:p-0",
+            item.meta?.containerClassName,
+            className
+          )}
+          align={align}
+          hideCode
+          component={<Component />}
+          source={
+            <ComponentSource
+              name={name}
+              collapsible={false}
+              styleName={styleName}
+            />
+          }
+          chromeLessOnMobile={chromeLessOnMobile}
+          {...props}
+        />
+      </BlockViewer>
+    )
+  }
+
   return (
     <ComponentPreviewTabs
       className={className}
@@ -79,3 +149,30 @@ export function ComponentPreview({
     />
   )
 }
+
+const getCachedRegistryItem = React.cache(
+  async (name: string, styleName: Style["name"]) => {
+    return await getRegistryItem(name, styleName)
+  }
+)
+
+const getCachedFileTree = React.cache(
+  async (files: Array<{ path: string; target?: string }>) => {
+    if (!files) {
+      return null
+    }
+
+    return await createFileTreeForRegistryItemFiles(files)
+  }
+)
+
+const getCachedHighlightedFiles = React.cache(
+  async (files: z.infer<typeof registryItemFileSchema>[]) => {
+    return await Promise.all(
+      files.map(async (file) => ({
+        ...file,
+        highlightedContent: await highlightCode(file.content ?? ""),
+      }))
+    )
+  }
+)
