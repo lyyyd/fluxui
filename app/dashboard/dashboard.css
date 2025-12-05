@@ -1,0 +1,14 @@
+/* ============================
+   Dashboard 专用样式
+   ============================ */
+
+/* 隐藏侧边栏的滚动条，但保持滚动功能 */
+.dashboard-sidebar [data-sidebar="content"] {
+  overflow-y: auto;
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none; /* IE and Edge */
+}
+
+.dashboard-sidebar [data-sidebar="content"]::-webkit-scrollbar {
+  display: none; /* Chrome, Safari, Opera */
+}

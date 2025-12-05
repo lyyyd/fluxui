@@ -92,9 +92,9 @@
   /* 环形指示器 */
   --ring: oklch(0.708 0 0);
   
-  /* 侧边栏跟随主题 */
+  /* 侧边栏激活状态使用主题色 */
   --sidebar-primary: oklch(0.205 0 0);
-  --sidebar-accent: oklch(0.97 0 0);
+  --sidebar-accent-foreground: oklch(0.205 0 0);
   --sidebar-ring: oklch(0.708 0 0);
   
   /* antd-mobile 主题色 */
@@ -116,9 +116,9 @@
   /* 环形指示器 */
   --ring: oklch(0.55 0.2 257);
   
-  /* 侧边栏跟随主题 */
+  /* 侧边栏激活状态使用主题色 */
   --sidebar-primary: oklch(0.55 0.2 257);
-  --sidebar-accent: oklch(0.95 0.03 257);
+  --sidebar-accent-foreground: oklch(0.55 0.2 257);
   --sidebar-ring: oklch(0.55 0.2 257);
   
   /* antd-mobile 主题色 */
@@ -140,9 +140,9 @@
   /* 环形指示器 */
   --ring: oklch(0.51 0.22 281);
   
-  /* 侧边栏跟随主题 */
+  /* 侧边栏激活状态使用主题色 */
   --sidebar-primary: oklch(0.51 0.22 281);
-  --sidebar-accent: oklch(0.95 0.03 281);
+  --sidebar-accent-foreground: oklch(0.51 0.22 281);
   --sidebar-ring: oklch(0.51 0.22 281);
   
   /* antd-mobile 主题色 */

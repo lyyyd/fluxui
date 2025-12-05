@@ -61,8 +61,10 @@
   --accent: oklch(0.269 0 0);
   --accent-foreground: oklch(0.985 0 0);
   --ring: oklch(0.556 0 0);
+  
+  /* 侧边栏激活状态使用主题色 */
   --sidebar-primary: oklch(0.922 0 0);
-  --sidebar-accent: oklch(0.269 0 0);
+  --sidebar-accent-foreground: oklch(0.922 0 0);
   --sidebar-ring: oklch(0.556 0 0);
   
   /* antd-mobile 主题色 */
@@ -78,8 +80,10 @@
   --accent: oklch(0.25 0.05 257);
   --accent-foreground: oklch(0.85 0.15 257);
   --ring: oklch(0.65 0.18 257);
+  
+  /* 侧边栏激活状态使用主题色 */
   --sidebar-primary: oklch(0.65 0.18 257);
-  --sidebar-accent: oklch(0.25 0.05 257);
+  --sidebar-accent-foreground: oklch(0.65 0.18 257);
   --sidebar-ring: oklch(0.65 0.18 257);
   
   /* antd-mobile 主题色 */
@@ -95,8 +99,10 @@
   --accent: oklch(0.25 0.05 281);
   --accent-foreground: oklch(0.85 0.15 281);
   --ring: oklch(0.65 0.2 281);
+  
+  /* 侧边栏激活状态使用主题色 */
   --sidebar-primary: oklch(0.65 0.2 281);
-  --sidebar-accent: oklch(0.25 0.05 281);
+  --sidebar-accent-foreground: oklch(0.65 0.2 281);
   --sidebar-ring: oklch(0.65 0.2 281);
   
   /* antd-mobile 主题色 */
