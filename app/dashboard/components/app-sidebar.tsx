@@ -5,6 +5,10 @@ import {
   AudioWaveform,
   BookOpen,
   Bot,
+  Calendar,
+  CalendarClock,
+  CalendarRange,
+  Clock,
   Command,
   Frame,
   GalleryVerticalEnd,
@@ -62,6 +66,26 @@ const data = {
       title: "Select",
       url: "/dashboard/playground/select",
       icon: ListFilter,
+    },
+    {
+      title: "DatePicker",
+      url: "/dashboard/playground/date-picker",
+      icon: Calendar,
+    },
+    {
+      title: "DateRangePicker",
+      url: "/dashboard/playground/date-range-picker",
+      icon: CalendarRange,
+    },
+    {
+      title: "TimePicker",
+      url: "/dashboard/playground/time-picker",
+      icon: Clock,
+    },
+    {
+      title: "DateTimeRangePicker",
+      url: "/dashboard/playground/datetime-range-picker",
+      icon: CalendarClock,
     },
     {
       title: "Playground",

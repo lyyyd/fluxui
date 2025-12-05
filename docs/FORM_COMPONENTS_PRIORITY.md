@@ -293,13 +293,15 @@ import { Label } from "@/components/ui/label"
 | 多选 Checkbox | Checkbox | - | ✅ 无需适配 | - | 0h |
 | 描述文字 | Label | - | ✅ 无需适配 | - | 0h |
 | 图片预览 | Dialog+Image | - | ✅ 无需适配 | - | 0h |
-| **下拉选择** | Select | Picker | ❌ 未开始 | **P0** | 6h |
-| **日期选择** | Calendar | CalendarPicker | ❌ 未开始 | **P0** | 6h |
-| **时间选择** | - | Picker | ❌ 未开始 | **P0** | 4h |
+| **下拉选择** | Select | Picker | ✅ 已完成 | **P0** | 6h |
+| **日期选择** | Calendar | CalendarPicker | ✅ 已完成 | **P0** | 6h |
+| **时间选择** | time input | Picker | ✅ 已完成 | **P0** | 4h |
 | **图片上传** | - | ImageUploader | ❌ 未开始 | **P1** | 8h |
 | **文件上传** | - | - | ❌ 未开始 | **P1** | 6h |
 
-**总计**: 30 小时（约 4 个工作日）
+**总计**: 30 小时（约 4 个工作日）  
+**已完成**: 16 小时（Select + DatePicker + TimePicker）✅  
+**剩余**: 14 小时（图片上传 + 文件上传）
 
 ---
 
