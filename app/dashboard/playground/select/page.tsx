@@ -65,11 +65,9 @@ export default function SelectDemo() {
           主题: <span className="font-semibold">{theme}</span> |
           模式: <span className="font-semibold">{mode}</span>
         </p>
-      </div>
-
-      {/* 主题切换器 */}
+      </div>      {/* 主题切换器 */}
       <section className="space-y-4">
-        <h2 className="text-2xl font-semibold">🎨 主题切换</h2>
+        <h3 className="text-lg font-semibold">🎨 主题切换</h3>
         <ThemeSwitcher />
         <p className="text-sm text-muted-foreground">
           ✨ 支持 Neutral（灰）、Blue（蓝）、Purple（紫）三种主题色，Light/Dark 模式
@@ -78,7 +76,7 @@ export default function SelectDemo() {
 
       {/* 基础用法 */}
       <section className="space-y-4">
-        <h2 className="text-2xl font-semibold">基础用法</h2>
+        <h3 className="text-lg font-semibold">基础用法</h3>
         <Card>
           <CardHeader>
             <CardTitle>选择城市</CardTitle>
@@ -103,11 +101,9 @@ export default function SelectDemo() {
             )}
           </CardContent>
         </Card>
-      </section>
-
-      {/* 默认值 */}
+      </section>      {/* 默认值 */}
       <section className="space-y-4">
-        <h2 className="text-2xl font-semibold">默认值</h2>
+        <h3 className="text-lg font-semibold">默认值</h3>
         <Card>          <CardHeader>
             <CardTitle>选择水果</CardTitle>
             <CardDescription>默认选中 &ldquo;苹果&rdquo;</CardDescription>
@@ -127,11 +123,9 @@ export default function SelectDemo() {
             </p>
           </CardContent>
         </Card>
-      </section>
-
-      {/* 禁用状态 */}
+      </section>      {/* 禁用状态 */}
       <section className="space-y-4">
-        <h2 className="text-2xl font-semibold">禁用状态</h2>
+        <h3 className="text-lg font-semibold">禁用状态</h3>
         <Card>
           <CardHeader>
             <CardTitle>禁用的选择器</CardTitle>
@@ -148,11 +142,9 @@ export default function SelectDemo() {
             </div>
           </CardContent>
         </Card>
-      </section>
-
-      {/* 表单示例 */}
+      </section>      {/* 表单示例 */}
       <section className="space-y-4">
-        <h2 className="text-2xl font-semibold">表单示例</h2>
+        <h3 className="text-lg font-semibold">表单示例</h3>
         <Card>
           <CardHeader>
             <CardTitle>用户信息</CardTitle>

@@ -22,11 +22,9 @@ export default function ComponentDemo() {
           主题: <span className="font-semibold">{theme}</span> | 
           模式: <span className="font-semibold">{mode}</span>
         </p>
-      </div>
-
-      {/* 主题切换器 */}
+      </div>      {/* 主题切换器 */}
       <section className="space-y-4">
-        <h2 className="text-2xl font-semibold">🎨 主题切换</h2>
+        <h3 className="text-lg font-semibold">🎨 主题切换</h3>
         <ThemeSwitcher />
         <p className="text-sm text-muted-foreground">
           ✨ 支持 Neutral（灰）、Blue（蓝）、Purple（紫）三种主题色，Light/Dark 模式
@@ -35,7 +33,7 @@ export default function ComponentDemo() {
 
       <div className="space-y-6">
         <section className="space-y-4">
-          <h2 className="text-2xl font-semibold">按钮变体</h2>
+          <h3 className="text-lg font-semibold">按钮变体</h3>
           <div className="flex flex-wrap gap-4">
             <Button variant="default">默认按钮</Button>
             <Button variant="destructive">危险按钮</Button>
@@ -44,27 +42,21 @@ export default function ComponentDemo() {
             <Button variant="ghost">幽灵按钮</Button>
             <Button variant="link">链接按钮</Button>
           </div>
-        </section>
-
-        <section className="space-y-4">
-          <h2 className="text-2xl font-semibold">按钮尺寸</h2>
+        </section>        <section className="space-y-4">
+          <h3 className="text-lg font-semibold">按钮尺寸</h3>
           <div className="flex flex-wrap items-center gap-4">
             <Button size="sm">小按钮</Button>
             <Button size="default">默认按钮</Button>
             <Button size="lg">大按钮</Button>
           </div>
-        </section>
-
-        <section className="space-y-4">
-          <h2 className="text-2xl font-semibold">禁用状态</h2>
+        </section>        <section className="space-y-4">
+          <h3 className="text-lg font-semibold">禁用状态</h3>
           <div className="flex flex-wrap gap-4">
             <Button disabled>禁用按钮</Button>
             <Button variant="destructive" disabled>禁用危险按钮</Button>
           </div>
-        </section>
-
-        <section className="space-y-4">
-          <h2 className="text-2xl font-semibold">组合示例</h2>
+        </section>        <section className="space-y-4">
+          <h3 className="text-lg font-semibold">组合示例</h3>
           <div className="flex flex-wrap gap-4">
             <Button variant="default" size="lg">
               提交表单
