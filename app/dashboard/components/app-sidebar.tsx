@@ -9,9 +9,11 @@ import {
   Frame,
   GalleryVerticalEnd,
   Map,
+  MousePointerClick,
   PieChart,
   Settings2,
   SquareTerminal,
+  ListFilter,
 } from "lucide-react"
 
 import { NavMain } from "@/app/dashboard/components/nav-main"
@@ -51,6 +53,16 @@ const data = {
     },
   ],
   navMain: [
+    {
+      title: "Button",
+      url: "/dashboard/playground/button",
+      icon: MousePointerClick,
+    },
+    {
+      title: "Select",
+      url: "/dashboard/playground/select",
+      icon: ListFilter,
+    },
     {
       title: "Playground",
       url: "#",
