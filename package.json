@@ -1,12 +1,12 @@
 {
-  "name": "ui",
+  "name": "fluxui",
   "version": "0.0.1",
   "private": true,
   "license": "MIT",
   "type": "module",
   "author": {
-    "name": "shadcn",
-    "url": "https://twitter.com/shadcn"
+    "name": "lyyyd",
+    "url": "https://github.com/lyyyd"
   },
   "workspaces": [
     "apps/*",
